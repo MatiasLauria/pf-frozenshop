@@ -1,6 +1,10 @@
+
 import React from 'react'
+import { Button } from 'react-bootstrap'
+import CartWidget from '../CartWidget/CartWidget'
 import logo from '../NavBar/logo.png'
 import '../NavBar/NavBar.css'
+
 
 const NavBar = () => {
   return (
@@ -10,14 +14,16 @@ const NavBar = () => {
     </div>
 
     <div className='menu'>
-        <button>INICIO</button>
-        <button>FRUTAS </button>
-        <button>VERDURAS</button>
-        <button>ALMACÉN</button>
-        <button>CONTACTO</button>
+        <Button>INICIO</Button>
+        <Button>FRUTAS </Button>
+        <Button>VERDURAS</Button>
+        <Button>ALMACÉN</Button>
+        <Button>CONTACTO</Button>
     </div>
 
     <div className='cart'>
+
+        <CartWidget/>
         
     </div>
 
