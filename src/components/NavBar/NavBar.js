@@ -1,9 +1,9 @@
 
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import CartWidget from '../CartWidget/CartWidget'
 import logo from '../NavBar/logo.png'
 import '../NavBar/NavBar.css'
+import { NavLink } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -14,11 +14,10 @@ const NavBar = () => {
     </div>
 
     <div className='menu'>
-        <Button>INICIO</Button>
-        <Button>FRUTAS </Button>
-        <Button>VERDURAS</Button>
-        <Button>ALMACÉN</Button>
-        <Button>CONTACTO</Button>
+        <NavLink to='/'>INICIO</NavLink>
+        <NavLink to='/categoria/frutas'>FRUTAS </NavLink>
+        <NavLink to='/categoria/verduras'>VERDURAS</NavLink>
+        <NavLink to='/carrito'>CARRITO</NavLink>
     </div>
 
     <div className='cart'>
