@@ -18,13 +18,10 @@ const NavBar = () => {
         <NavLink to='/categoria/frutas'>FRUTAS </NavLink>
         <NavLink to='/categoria/verduras'>VERDURAS</NavLink>
         <NavLink to='/cart'><CartWidget/></NavLink>
-    </div>
-
-    <div className='cart'>
-
-        <CartWidget/>
         
     </div>
+
+    
 
 </nav>
   )

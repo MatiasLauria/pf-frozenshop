@@ -3,7 +3,11 @@ import cart from '..//CartWidget/cart.svg'
 
 
 
+
  const CartWidget = () => {
+
+
+
   return (
     <div>
         <img src={cart} alt= 'cart'/>
