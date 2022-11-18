@@ -1,8 +1,18 @@
 .counter{
     width: fit-content;
     background-color: purple;
+    border-radius: 5px;
     margin: auto;
     padding: 1rem;
     text-align: center;
     color: white;
+}
+
+.counter button{
+    border-radius: 5px;
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    
 }

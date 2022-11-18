@@ -1,0 +1,23 @@
+.detailContainer{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.detailContainer img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+
+.content button{
+    border-radius: 5px;
+    border: 2px solid purple;
+    background: pink;
+}
+
+
+
+

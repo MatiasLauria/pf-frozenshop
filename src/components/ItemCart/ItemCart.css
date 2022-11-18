@@ -8,4 +8,11 @@
 .itemCart img{
     width: 200px;
     margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.itemCart button{
+    border-radius: 5px;
+    border: 2px solid purple;
+    background: pink;
 }

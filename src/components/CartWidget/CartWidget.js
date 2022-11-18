@@ -1,5 +1,5 @@
 import React from 'react'
-import cart from '..//CartWidget/cart.svg'
+import cart from '..//CartWidget/cart.png'
 import { useCartContext } from '../../Context/CartContext'
 
 

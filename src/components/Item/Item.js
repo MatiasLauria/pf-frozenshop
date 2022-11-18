@@ -8,11 +8,16 @@ const Item = ({info}) => {
 
 
   return (
-    <Link to={`/detalle/${info.id}`} className='product'>
-        <img src={info.image} alt='arandano'/>
+    <div className='container'>
+      
+       <div className='cardContainer'> <img src={info.image} alt=''/>
         <p>{info.title}</p>
         <p>${info.price}</p>
-    </Link>
+        <button><Link to={`/detalle/${info.id}`} className='product'>detalle</Link></button>
+        </div>
+    </div>
+    
+    
   )
 }
 
