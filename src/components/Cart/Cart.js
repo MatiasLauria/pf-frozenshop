@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../../Context/CartContext'
 import ItemCart from '../ItemCart/ItemCart';
@@ -8,19 +8,37 @@ import './Cart.css'
 
 
 
+
 const Cart = () => {
 
   const { cart, totalPrice,} = useCartContext();
 
+
+
   const order = {
-    buyer: {
-      name: 'Matias',
-      email: 'matias@gmail.com',
-      phone: '1029384756',
-      address: 'barcelona'
-    },
+    buyer: '',
     items: cart.map(product => ({id: product.id, title: product.title, price: product.price, quantity: product.quantity})),
     total: totalPrice(),
+  }
+  
+  
+
+  const valorInicial ={
+    nombre:'',
+    apellido:'',
+    email:''
+}
+
+  const [user, setUser] = useState(valorInicial)
+
+  const capturarImputs = (e) =>{
+    const {name, value} = e.target;
+    setUser({...user, [name] : value})
+  }
+
+  const guardarDatos = async(e) =>{
+    e.preventDefault();
+    setUser({...valorInicial})
   }
 
   const handleClick = () => {
@@ -53,21 +71,35 @@ const Cart = () => {
         cart.map(product => <ItemCart key={product.id} product={product}/>)
       }
 
-      
-
       <div style={{ textAlign: 'center' }}>
-      <p>
+        <p>
           TOTAL: {totalPrice()}
-      </p>
+        </p>
 
-      <button className='checkOut'><Link to='/' onClick={handleClick}> Finalizar compra</Link></button>
-
+        
+        
       
       </div>
-                
-      
-      </>
 
+
+      <div style={{ textAlign: 'center' }}>
+      <form onSubmit={guardarDatos}>
+          <input type='text' name='nombre' placeholder='Nombre' 
+          onChange={capturarImputs} value={user.nombre}/>
+         
+         <input type='text' name='apellido' placeholder='Apellido'
+          onChange={capturarImputs} value={user.apellido}/>
+         
+          <input type='text' name='email' placeholder='Email'
+          onChange={capturarImputs} value={user.email}/> 
+
+          <button className='checkOut'><Link to='/' onClick={handleClick}> Finalizar compra</Link></button>
+
+                   
+      </form>
+      </div>
+      </>
+      
 )
  
 
